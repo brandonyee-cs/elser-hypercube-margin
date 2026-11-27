@@ -1,0 +1,27 @@
+# Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release); Mathlib v4.33.1 (2026-11-27)
+$ lean HypercubeMargin/Defs.lean && lean HypercubeMargin/Main.lean
+HypercubeMargin/Main.lean:253:40: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+HypercubeMargin/Main.lean:352:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+HypercubeMargin/Main.lean:429:70: warning: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hlam, mulVec, dotProduct, transpose_apply, Pi.single_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+HypercubeMargin/Main.lean:596:26: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex, hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exit 0 (only linter warnings above, if any)
+$ lean Axioms.lean
+'OMA.S_mo_448472.main' depends on axioms: [propext, Classical.choice, Quot.sound]
+$ grep -nE 'sorry|admit|native_decide|^axiom' HypercubeMargin/*.lean
+(no matches)

@@ -1,0 +1,20 @@
+n | nonsingular sets scanned | N_n = max |m^-1 e|^2 | bound (n+1)^n/4^(n-1) - 1 | N_n <= bound | equality
+1 | 1 | 1 | 1 | True | True
+    a maximizing matrix (rows): [(1,)]
+    det = 1, det * m^-1 e = [1]
+2 | 2 | 1 | 5/4 | True | False
+    a maximizing matrix (rows): [(1, 1), (-1, 1)]
+    det = 2, det * m^-1 e = [0, 2]
+3 | 12 | 3 | 3 | True | True
+    a maximizing matrix (rows): [(1, 1, 1), (-1, -1, 1), (-1, 1, -1)]
+    det = -4, det * m^-1 e = [4, -4, -4]
+4 | 232 | 7 | 561/64 | True | False
+    a maximizing matrix (rows): [(1, 1, 1, 1), (-1, -1, 1, 1), (-1, 1, -1, 1), (1, -1, -1, -1)]
+    det = -8, det * m^-1 e = [-8, 8, 8, -16]
+5 | 15040 | 19 | 235/8 | True | False
+    a maximizing matrix (rows): [(1, 1, 1, 1, 1), (-1, 1, 1, -1, 1), (1, -1, -1, -1, 1), (-1, -1, 1, 1, -1), (-1, 1, -1, 1, -1)]
+    det = 16, det * m^-1 e = [-32, -16, -16, 32, 48]
+6 | 3337152 | 59 | 116625/1024 | True | False
+    a maximizing matrix (rows): [(1, 1, 1, 1, 1, 1), (-1, 1, 1, -1, 1, 1), (1, -1, -1, -1, 1, 1), (-1, -1, 1, 1, -1, 1), (-1, -1, -1, 1, 1, -1), (1, 1, -1, -1, -1, -1)]
+    det = 32, det * m^-1 e = [-64, 96, -160, 64, -32, 128]
+python3 -I scripts/matrix_side.py 6 8  633.28s user 3.49s system 375% cpu 2:49.56 total
